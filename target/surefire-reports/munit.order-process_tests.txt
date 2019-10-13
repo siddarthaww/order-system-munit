@@ -1,0 +1,61 @@
+
+org.mule.api.config.ConfigurationException: Line 23 in XML document from URL [file:/D:/anypointstudio/3.x/advanced/order-system/src/test/munit/order-process_tests.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 23; columnNumber: 173; cvc-complex-type.2.4.a: Invalid content was found starting with element 'munit:test'. One of '{"http://www.mulesoft.org/schema/mule/core":annotations, "http://www.mulesoft.org/schema/mule/core":description, "http://www.mulesoft.org/schema/mule/core":abstract-message-source, "http://www.mulesoft.org/schema/mule/core":abstract-inbound-endpoint, "http://www.mulesoft.org/schema/mule/core":abstract-message-processor, "http://www.mulesoft.org/schema/mule/core":abstract-outbound-endpoint, "http://www.mulesoft.org/schema/mule/core":abstract-mixed-content-message-processor, "http://www.mulesoft.org/schema/mule/core":response}' is expected. (org.mule.api.lifecycle.InitialisationException)
+	at org.mule.config.builders.AbstractConfigurationBuilder.configure(AbstractConfigurationBuilder.java:49)
+	at org.mule.config.builders.AbstractResourceConfigurationBuilder.configure(AbstractResourceConfigurationBuilder.java:69)
+	at org.mule.context.DefaultMuleContextFactory$1.configure(DefaultMuleContextFactory.java:89)
+	at org.mule.context.DefaultMuleContextFactory.doCreateMuleContext(DefaultMuleContextFactory.java:222)
+	at org.mule.context.DefaultMuleContextFactory.createMuleContext(DefaultMuleContextFactory.java:81)
+	at org.mule.munit.runner.MunitMuleContextFactory.createMuleContext(MunitMuleContextFactory.java:86)
+	at org.mule.munit.runner.MuleContextManager.createMule(MuleContextManager.java:117)
+	at org.mule.munit.runner.MuleContextManager.startMule(MuleContextManager.java:70)
+	at org.mule.munit.runner.mule.SuiteRunner.<init>(SuiteRunner.java:53)
+	at org.mule.munit.runner.mule.SuiteRunner.<init>(SuiteRunner.java:45)
+	at org.mule.munit.remote.RemoteRunner.runTestSuite(RemoteRunner.java:75)
+	at org.mule.munit.remote.RemoteRunner.run(RemoteRunner.java:55)
+	at org.mule.munit.remote.RemoteRunner.main(RemoteRunner.java:39)
+Caused by: org.mule.api.lifecycle.InitialisationException: Line 23 in XML document from URL [file:/D:/anypointstudio/3.x/advanced/order-system/src/test/munit/order-process_tests.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 23; columnNumber: 173; cvc-complex-type.2.4.a: Invalid content was found starting with element 'munit:test'. One of '{"http://www.mulesoft.org/schema/mule/core":annotations, "http://www.mulesoft.org/schema/mule/core":description, "http://www.mulesoft.org/schema/mule/core":abstract-message-source, "http://www.mulesoft.org/schema/mule/core":abstract-inbound-endpoint, "http://www.mulesoft.org/schema/mule/core":abstract-message-processor, "http://www.mulesoft.org/schema/mule/core":abstract-outbound-endpoint, "http://www.mulesoft.org/schema/mule/core":abstract-mixed-content-message-processor, "http://www.mulesoft.org/schema/mule/core":response}' is expected.
+	at org.mule.registry.AbstractRegistry.initialise(AbstractRegistry.java:112)
+	at org.mule.config.spring.SpringXmlConfigurationBuilder.createSpringRegistry(SpringXmlConfigurationBuilder.java:177)
+	at org.mule.config.spring.SpringXmlConfigurationBuilder.doConfigure(SpringXmlConfigurationBuilder.java:100)
+	at org.mule.config.builders.AbstractConfigurationBuilder.configure(AbstractConfigurationBuilder.java:43)
+	... 12 more
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 23 in XML document from URL [file:/D:/anypointstudio/3.x/advanced/order-system/src/test/munit/order-process_tests.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 23; columnNumber: 173; cvc-complex-type.2.4.a: Invalid content was found starting with element 'munit:test'. One of '{"http://www.mulesoft.org/schema/mule/core":annotations, "http://www.mulesoft.org/schema/mule/core":description, "http://www.mulesoft.org/schema/mule/core":abstract-message-source, "http://www.mulesoft.org/schema/mule/core":abstract-inbound-endpoint, "http://www.mulesoft.org/schema/mule/core":abstract-message-processor, "http://www.mulesoft.org/schema/mule/core":abstract-outbound-endpoint, "http://www.mulesoft.org/schema/mule/core":abstract-mixed-content-message-processor, "http://www.mulesoft.org/schema/mule/core":response}' is expected.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.mule.munit.runner.spring.config.MunitApplicationContext.communicateMuleContextToParsers(MunitApplicationContext.java:125)
+	at org.mule.munit.runner.spring.config.MunitApplicationContext.loadBeanDefinitions(MunitApplicationContext.java:98)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:541)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:452)
+	at org.mule.config.spring.SpringRegistry.doInitialise(SpringRegistry.java:108)
+	at org.mule.registry.AbstractRegistry.initialise(AbstractRegistry.java:104)
+	... 15 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 23; columnNumber: 173; cvc-complex-type.2.4.a: Invalid content was found starting with element 'munit:test'. One of '{"http://www.mulesoft.org/schema/mule/core":annotations, "http://www.mulesoft.org/schema/mule/core":description, "http://www.mulesoft.org/schema/mule/core":abstract-message-source, "http://www.mulesoft.org/schema/mule/core":abstract-inbound-endpoint, "http://www.mulesoft.org/schema/mule/core":abstract-message-processor, "http://www.mulesoft.org/schema/mule/core":abstract-outbound-endpoint, "http://www.mulesoft.org/schema/mule/core":abstract-mixed-content-message-processor, "http://www.mulesoft.org/schema/mule/core":response}' is expected.
+	at org.apache.xerces.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at org.apache.xerces.util.ErrorHandlerWrapper.error(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.XMLErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.reportSchemaError(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.handleStartElement(Unknown Source)
+	at org.apache.xerces.impl.xs.XMLSchemaValidator.startElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanStartElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.mule.munit.runner.spring.config.document.MunitAnnotatedDocumentLoader.loadDocument(MunitAnnotatedDocumentLoader.java:55)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391)
+	... 25 more
+
+=============================================================================
+Tests run: 0 - Failures: 0 - Errors: 0 - Skipped: 0 - Time elapsed: 0.000 sec
+=============================================================================
